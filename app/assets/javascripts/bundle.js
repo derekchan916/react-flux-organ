@@ -19744,7 +19744,7 @@
 
 	var _keys = [];
 	var Store = __webpack_require__(162).Store;
-	// var OrganConstants = require('../constants/organ.js')
+	var OrganConstants = __webpack_require__(188);
 	var AppDispatcher = __webpack_require__(179);
 	var KeyStore = new Store(AppDispatcher);
 
@@ -26523,7 +26523,9 @@
 	  G5: 783.99,
 	  A5: 880.00,
 	  B5: 987.77,
-	  C6: 1046.50
+	  C6: 1046.50,
+	  D6: 1174.66,
+	  E6: 1318.51
 	};
 
 	module.exports = TONES;
@@ -35759,6 +35761,8 @@
 	  83, // 's'
 	  68, // 'd'
 	  70, // 'f'
+	  71, // 'g'
+	  72, // 'h'
 	  74, // 'j'
 	  75, // 'k'
 	  76, // 'l'
@@ -35796,7 +35800,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var AppDispatcher = __webpack_require__(179);
-	var OrganContants = __webpack_require__(187);
+	var OrganConstants = __webpack_require__(188);
 
 	var KeyActions = {
 	  groupUpdate: function (notes) {
@@ -35824,7 +35828,8 @@
 	module.exports = KeyActions;
 
 /***/ },
-/* 187 */
+/* 187 */,
+/* 188 */
 /***/ function(module, exports) {
 
 	var OrganConstants = {

@@ -1,5 +1,5 @@
 var AppDispatcher = require('../dispatcher/dispatcher.js');
-var OrganContants = require('../constants/organConstants.js');
+var OrganConstants = require('../constants/organ.js');
 
 var KeyActions = {
   groupUpdate: function (notes) {
