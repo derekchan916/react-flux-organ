@@ -26,7 +26,7 @@ var NoteKey = React.createClass({
       this.note.stop();
     }
     this.setState({ pressed: pressed });
-  }
+  },
 
   render: function () {
     var className = "note-key";
@@ -34,7 +34,7 @@ var NoteKey = React.createClass({
       className += " pressed";
     }
     return <div className={className}>{this.props.noteName}</div>;
-  },
+  }
 });
 
 module.exports = NoteKey;

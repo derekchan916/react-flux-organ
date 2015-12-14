@@ -1,9 +1,9 @@
 var $ = require('jquery');
 var KeyActions = require('../actions/keyActions.js')
-var TONES = require('../constant/tones.js');
+var TONES = require('../constants/tones.js');
 
 $(function () {
-  var NOTE_MAP = {}, tones = Object.keys(window.TONES);
+  var NOTE_MAP = {}, tones = Object.keys(TONES);
   var validKeys = [
     65, // 'a'
     83, // 's'
