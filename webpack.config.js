@@ -1,6 +1,6 @@
 module.exports = {
   context: __dirname,
-  entry: "./frontend/todo_react.jsx",
+  entry: "./frontend/FluxOrgan.jsx",
   output: {
     path: "./app/assets/javascripts/",
     filename: "bundle.js"
