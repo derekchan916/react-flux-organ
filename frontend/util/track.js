@@ -1,13 +1,33 @@
-var track = function (name){
-  this.name = name;
-  this.roll = [];
+var $ = require('jquery');
+
+var track = function (attrs){
+  var defaults = {
+    name = "";
+    roll = [];
+  };
+
+  this.attributes = $.extend(defaults, attrs || {});
 };
 
-var startRecording = function() {
-  this.roll = [];
-  this.time = new Date();
-};
+track.prototype = {
+  startRecording: function() {
+    this.attributes.roll = [];
+    this.start = Date.now();
+  },
 
-var addNotes = function(note) {
+  addNotes = function(notes) {
+    this.timeSlice = { time: this._timeDelta() };
+    if (notes.length > 0) {
+      timeSlice.notes = notes;
+    }
+    this.attributes.roll.push(timeSlice);
+  },
 
+  stopRecording = function([]) {
+    this.addNotes([]);
+  }
+
+  _timeDelta = function() {
+    return Date.now() - this.start;
+  }
 };
