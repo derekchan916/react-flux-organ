@@ -32,6 +32,16 @@ var Recorder = React.createClass({
     }
   },
 
+  recordClick: function (e) {
+    if (this.state.recording) {
+      this.state.track.completeRecording();
+      this.setState({ recording: false });
+    } else {
+      this.setState({ recording: true });
+      this.state.track.startRecording();
+    }
+  },
+
   playClick: function (e) {
     if(!this.isTrackNew()){
       this.state.track.play();
